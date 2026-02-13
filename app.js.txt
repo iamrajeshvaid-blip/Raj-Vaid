@@ -1,0 +1,3 @@
+function login() {
+  alert("Supabase OTP login will go here!");
+}
