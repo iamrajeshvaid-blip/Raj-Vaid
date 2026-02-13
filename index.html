@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f172a">
+    <meta name="description"
+        content="Wolf Pack Fitness - Unleash Your Alpha Power. Premium AI fitness, mood, and diet plans.">
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="wolf-logo.png">
+    <link rel="icon" type="image/png" href="wolf-logo.png">
+
+    <title>Wolf Pack Fitness 🐺</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Animated Particle Background -->
+    <div id="particles-bg" class="particles-container"></div>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Animated Wolf Eyes Header -->
+        <div class="wolf-eyes-container">
+            <div class="wolf-eye left-eye">
+                <div class="pupil"></div>
+            </div>
+            <div class="wolf-eye right-eye">
+                <div class="pupil"></div>
+            </div>
+        </div>
+
+        <!-- Animated Title -->
+        <header class="header-section">
+            <h1 class="title-main">
+                <span class="title-word">ENTER</span>
+                <span class="title-word">THE</span>
+                <span class="title-word">DEN</span>
+            </h1>
+            <p class="subtitle">Unleash Your Alpha Power • AI-Powered Fitness & Mood Mastery</p>
+            <p class="tagline">🐺 Join the Pack. Rise to Legendary. Premium fitness starts here.</p>
+        </header>
+
+        <!-- Login Section -->
+        <section class="login-section">
+            <div class="login-card">
+                <h2>Join the Pack Today</h2>
+
+                <div class="input-group">
+                    <input type="email" id="emailInput" placeholder="Your email or phone" class="email-input">
+                    <button onclick="requestOTP()" class="btn-primary btn-howl">
+                        🐺 SEND OTP
+                    </button>
+                </div>
+
+                <div id="otp-section" class="otp-section hidden">
+                    <input type="text" id="otpInput" placeholder="Enter 6-digit code" class="otp-input" maxlength="6">
+                    <button onclick="verifyOTP()" class="btn-primary btn-verify">
+                        ✓ UNLOCK DEN
+                    </button>
+                    <button onclick="backToEmail()" class="btn-secondary">
+                        ← Back
+                    </button>
+                </div>
+
+                <p class="login-note">Instant OTP • No password spam • Biometric coming soon</p>
+            </div>
+        </section>
+
+        <!-- Feature Teasers -->
+        <section class="features-teaser">
+            <div class="feature-card">
+                <span class="feature-icon">🧠</span>
+                <p>Mood Analysis</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">💪</span>
+                <p>AI Workouts</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🍽️</span>
+                <p>Smart Diet</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🏆</span>
+                <p>Gamification</p>
+            </div>
+        </section>
+
+        <!-- Install PWA Prompt (hidden by default) -->
+        <div id="install-prompt" class="install-prompt hidden">
+            <div class="prompt-content">
+                <p>🐺 <strong>Install Wolf Pack Fitness</strong></p>
+                <p style="font-size: 0.9em; opacity: 0.8;">Native app experience on your phone</p>
+                <button onclick="installApp()" class="btn-primary btn-small">Install</button>
+                <button onclick="dismissInstall()" class="btn-secondary btn-small">Not Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
